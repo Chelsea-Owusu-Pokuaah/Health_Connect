@@ -33,7 +33,7 @@ import 'package:health_connect/features/chat/presentation/chat_list_screen.dart'
 import 'package:health_connect/features/chat/presentation/models/chat_participant.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/splash',
+  initialLocation: '/splash', 
   routes: [
 
     /// --------------------

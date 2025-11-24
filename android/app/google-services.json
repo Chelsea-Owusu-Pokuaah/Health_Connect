@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "157413340088",
+    "project_id": "health-connect-1d8e4",
+    "storage_bucket": "health-connect-1d8e4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157413340088:android:70b619a85295111c8a154d",
+        "android_client_info": {
+          "package_name": "com.gotg.healthConnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR5I8gcBeQyVHaCqrDx4z6E83fC7splJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157413340088:android:35dd2bc6a5fe447e8a154d",
+        "android_client_info": {
+          "package_name": "com.gotg.health_connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR5I8gcBeQyVHaCqrDx4z6E83fC7splJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
