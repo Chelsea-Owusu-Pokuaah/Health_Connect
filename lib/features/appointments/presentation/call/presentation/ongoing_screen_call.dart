@@ -1,12 +1,11 @@
-// lib/features/call/presentation/ongoing_call_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import '../../call/presentation/cubit/call_cubit.dart';
-import '../../call/presentation/cubit/call_state.dart';
-import 'widgets/call_action_button.dart';
-import 'widgets/small_preview_window.dart';
-import 'widgets/connection_status_banner.dart';
+import 'package:health_connect/features/appointments/presentation/call/bloc/call_cubit.dart';
+import 'package:health_connect/features/appointments/presentation/call/bloc/call_state.dart';
+import 'package:health_connect/features/appointments/presentation/call/widgets/call_action_button.dart';
+import 'package:health_connect/features/appointments/presentation/call/widgets/small_preview_window.dart';
+import 'package:health_connect/features/appointments/presentation/call/widgets/connection_status_banner.dart';
 
 /// Arguments passed when navigating to /call
 class CallScreenArgs {
@@ -25,11 +24,8 @@ class OngoingCallScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => CallCubit(),
-      child: WillPopScope(
-        onWillPop: () async {
-          // Prevent accidental back press; end call explicitly instead.
-          return false;
-        },
+      child: PopScope(
+        canPop: false,
         child: Scaffold(
           backgroundColor: Colors.black,
           body: SafeArea(

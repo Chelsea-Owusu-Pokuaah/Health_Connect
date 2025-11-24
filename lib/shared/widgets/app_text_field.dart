@@ -60,7 +60,7 @@ class AppTextField extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(borderRadius),
-                borderSide: BorderSide(color: AppColors.primary.withOpacity(0.14)),
+                borderSide: BorderSide(color: AppColors.primary.withValues(alpha: 0.14)),
               ),
               suffixIcon: suffixIcon,
             ),

@@ -15,7 +15,9 @@ class ConnectionStatusBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: isConnected ? Colors.green.withOpacity(0.14) : Colors.orange.withOpacity(0.12),
+      color: isConnected
+          ? Colors.green.withValues(alpha: 0.14)
+          : Colors.orange.withValues(alpha: 0.12),
       padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
       child: Text(
         message,

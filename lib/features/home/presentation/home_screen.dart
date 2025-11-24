@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:health_connect/core/themes/app_colors.dart';
 import 'package:health_connect/core/themes/app_theme.dart';

@@ -84,7 +84,7 @@ class ChatMessageBubble extends StatelessWidget {
             child: Container(
               height: 4,
               decoration: BoxDecoration(
-                color: textColor.withOpacity(0.4),
+                color: textColor.withValues(alpha: 0.4),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),

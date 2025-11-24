@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:health_connect/core/themes/app_theme.dart';
-import 'package:health_connect/core/themes/app_colors.dart';
 
 class TopBar extends StatelessWidget {
   final String title;
@@ -28,7 +27,7 @@ class TopBar extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
-              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 6)],
+              boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.03), blurRadius: 6)],
             ),
             child: const Center(
               child: Icon(
@@ -65,7 +64,7 @@ class TopBar extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
-              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 6)],
+              boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.03), blurRadius: 6)],
             ),
             child: Stack(
               alignment: Alignment.center,

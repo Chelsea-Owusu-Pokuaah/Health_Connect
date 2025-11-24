@@ -24,7 +24,7 @@ class SmallPreviewWindow extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.black54,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white.withOpacity(0.6), width: 2),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.6), width: 2),
       ),
       child: child ??
           Center(

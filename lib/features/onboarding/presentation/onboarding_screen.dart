@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:health_connect/core/themes/app_theme.dart';
 import 'package:health_connect/core/themes/app_colors.dart';
 import 'widgets/app_logo_widget.dart';
 import 'widgets/onboarding_indicator.dart';
 import 'widgets/onboarding_page.dart';
 import 'widgets/primary_button.dart';
-import 'package:health_connect/features/onboarding/presentation/onboarding_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

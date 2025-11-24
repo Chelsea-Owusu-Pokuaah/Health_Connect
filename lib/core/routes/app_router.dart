@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 // Splash
@@ -17,6 +18,14 @@ import 'package:health_connect/features/home/presentation/home_screen.dart';
 // Appointments
 import 'package:health_connect/features/appointments/presentation/schedule_appointment.dart';
 import 'package:health_connect/features/appointments/presentation/book_appointment/book_appointment_screen.dart';
+import 'package:health_connect/features/appointments/presentation/call/presentation/ongoing_screen_call.dart';
+
+// Doctor appointments
+import 'package:health_connect/features/doctor_appointments/bloc/doctor_appointments_cubit.dart';
+import 'package:health_connect/features/doctor_appointments/models/appointment.dart';
+import 'package:health_connect/features/doctor_appointments/presentation/doctor_appointments_screen.dart';
+import 'package:health_connect/features/doctor_appointments/presentation/appointment_detail_screen.dart';
+
 
 // Chat
 import 'package:health_connect/features/chat/presentation/chat_detail_screen.dart';
@@ -125,6 +134,50 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) {
         final participant = state.extra as ChatParticipant;
         return ChatDetailScreen(participant: participant);
+      },
+    ),
+
+    // Doctor appointments dashboard
+    GoRoute(
+      path: '/doctor/appointments',
+      name: 'doctor_appointments',
+      builder: (context, state) => BlocProvider(
+        create: (_) => DoctorAppointmentsCubit()..loadAppointments(),
+        child: const DoctorAppointmentsScreen(),
+      ),
+    ),
+
+    GoRoute(
+      path: '/doctor/appointment/:id',
+      name: 'doctor_appointment_detail',
+      builder: (context, state) {
+        final appointment = state.extra;
+        if (appointment is Appointment) {
+          return AppointmentDetailScreen(appointment: appointment);
+        }
+        return const PlaceholderScreen(title: 'Appointment not found');
+      },
+    ),
+
+    GoRoute(
+      path: '/call',
+      name: 'call',
+      builder: (context, state) {
+        final extra = state.extra;
+        if (extra is CallScreenArgs) {
+          return OngoingCallScreen(args: extra);
+        }
+        if (extra is Appointment) {
+          return OngoingCallScreen(
+            args: CallScreenArgs(
+              isDoctor: true,
+              doctorName: extra.patientName,
+            ),
+          );
+        }
+        return const OngoingCallScreen(
+          args: CallScreenArgs(isDoctor: false, doctorName: 'Doctor'),
+        );
       },
     ),
   ],

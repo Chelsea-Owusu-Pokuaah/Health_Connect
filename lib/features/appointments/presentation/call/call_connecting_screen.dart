@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:health_connect/core/themes/app_colors.dart';
 import 'package:health_connect/core/themes/app_theme.dart';
-
-import '../../chat/presentation/models/chat_participant.dart';
+import 'package:health_connect/features/chat/presentation/models/chat_participant.dart';
 
 class CallConnectingScreen extends StatelessWidget {
   final ChatParticipant doctor;
@@ -73,7 +73,7 @@ class CallConnectingScreen extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.pop(context);
+                  context.pop();
                 },
                 child: const Text(
                   "Cancel Call",

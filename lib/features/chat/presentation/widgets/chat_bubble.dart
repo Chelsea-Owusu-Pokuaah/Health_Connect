@@ -49,7 +49,7 @@ class ChatBubble extends StatelessWidget {
               _formatTime(timestamp),
               style: AppTheme.captionStyle.copyWith(
                 fontSize: 11,
-                color: AppColors.textSecondary.withOpacity(0.7),
+                color: AppColors.textSecondary.withValues(alpha: 0.7),
               ),
             ),
         ],

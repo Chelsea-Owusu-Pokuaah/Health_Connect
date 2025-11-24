@@ -14,7 +14,7 @@ class EmptyState extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.calendar_today, size: 48, color: AppColors.primary.withOpacity(0.14)),
+          Icon(Icons.calendar_today, size: 48, color: AppColors.primary.withValues(alpha: 0.14)),
           const SizedBox(height: 12),
           Text(title, style: AppTheme.lightTheme.textTheme.titleLarge),
           const SizedBox(height: 8),

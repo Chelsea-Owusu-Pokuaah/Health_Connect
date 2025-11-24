@@ -12,23 +12,25 @@ class FeatureTile extends StatelessWidget {
   final bool large;
 
   const FeatureTile._({
-    super.key,
+    Key? key,
     required this.title,
     this.subtitle,
     required this.iconAsset,
     this.badge,
     this.onTap,
     required this.large,
-  });
+  }) : super(key: key);
 
   // SMALL TILE
   factory FeatureTile.small({
+    Key? key,
     required String title,
     required String iconAsset,
     String? badge,
     VoidCallback? onTap,
   }) {
     return FeatureTile._(
+      key: key,
       title: title,
       iconAsset: iconAsset,
       badge: badge,
@@ -39,6 +41,7 @@ class FeatureTile extends StatelessWidget {
 
   // LARGE TILE
   factory FeatureTile.large({
+    Key? key,
     required String title,
     String? subtitle,
     required String iconAsset,
@@ -46,6 +49,7 @@ class FeatureTile extends StatelessWidget {
     VoidCallback? onTap,
   }) {
     return FeatureTile._(
+      key: key,
       title: title,
       subtitle: subtitle,
       iconAsset: iconAsset,
@@ -87,7 +91,7 @@ class FeatureTile extends StatelessWidget {
                 height: 44,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.18),
+                  color: Colors.white.withValues(alpha: 0.18),
                 ),
                 child: Center(
                   child: SvgPicture.asset(

@@ -55,7 +55,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
             children: [
               TopBar(
                 title: "Book Appointment",
-                onBack: () => context.pop(),
+                onBack: () => context.go('/home'),
                 onNotifications: () => context.go('/notifications'),
               ),
 

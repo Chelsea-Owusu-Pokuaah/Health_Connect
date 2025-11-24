@@ -9,7 +9,7 @@ class StatusTag extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bg = (color ?? AppColors.primary).withOpacity(0.12);
+    final bg = (color ?? AppColors.primary).withValues(alpha: 0.12);
     final fg = color ?? AppColors.primary;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),

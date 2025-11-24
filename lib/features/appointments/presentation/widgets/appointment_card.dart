@@ -32,7 +32,7 @@ class AppointmentCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
-          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 8)],
+          boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.03), blurRadius: 8)],
         ),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         child: Column(

@@ -53,7 +53,7 @@ class DoctorSelector extends StatelessWidget {
               width: 85,
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: isSelected ? AppColors.primary.withOpacity(0.15) : Colors.white,
+                color: isSelected ? AppColors.primary.withValues(alpha: 0.15) : Colors.white,
                 borderRadius: BorderRadius.circular(16),
                 border: isSelected
                     ? Border.all(color: AppColors.primary, width: 2)
@@ -115,7 +115,7 @@ class _DoctorAvatar extends StatelessWidget {
       child: ClipOval(
         child: avatarUrl == null
             ? Container(
-                color: AppColors.primary.withOpacity(0.25),
+                color: AppColors.primary.withValues(alpha: 0.25),
                 child: Center(
                   child: Text(
                     initials.toUpperCase(),
@@ -131,7 +131,7 @@ class _DoctorAvatar extends StatelessWidget {
                 avatarUrl!,
                 fit: BoxFit.cover,
                 errorBuilder: (_, __, ___) => Container(
-                  color: AppColors.primary.withOpacity(0.25),
+                  color: AppColors.primary.withValues(alpha: 0.25),
                   child: Center(
                     child: Text(
                       initials.toUpperCase(),
